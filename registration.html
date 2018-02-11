@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Parents Registration</title>
+
+    <link rel="icon" href="assets/image/favicon.ico" type="image/ico" sizes="16x16">
+
+    <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.14.0/jquery.validate.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous"> 
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <!-- <link rel="stylesheet" type="text/css" href="assets/css/style.css"> -->
+    <link rel="stylesheet" href="assets/css/animate.css">
+    
+     <style type="text/css">
+      body
+    {
+      background-image: url("assets/image/backgound.jpg");
+      opacity: 0.9;
+
+    }
+
+    h5,h3,.white-text
+   {
+     font-weight: 600;
+     font-size: 33px;
+     text-align: center;padding: 20px;
+   } 
+      .container
+      {
+        margin-top: 50px;
+        width: 1000px;
+        height: 50%;
+        overflow: scroll;
+      }
+
+      .form-container
+      {
+        padding: 40px;
+        padding-top: 10px;
+      }
+      #showprofile{
+         float: right;
+      }
+      #message_window{
+         color: red;
+      }
+      .confirmation-tabs-btn
+      {
+        position: absolute;
+      }
+      .switch{text-align: center;}
+      select{border: 1px solid gray;
+    border-radius: 2px;
+    height: 3rem;width: 50%;margin-left: 50px;}
+     
+    </style>
+    
+</head>
+<body>
+  <!-- SIGN IN -->
+  <div class="container white z-depth-2">
+    <div class="row">
+      <div id="login" class="col-12 animated fadeIn">
+         <h3 class="teal-text">2018 Registration</h3>
+            <div class="row">
+              <div class="col s4"><button class="btn waves-effect waves-light teal" id="addchild">Add Another player</button></div>
+<<<<<<< HEAD
+               
+=======
+               <div class="col s4 text-center"><p id="message_window"></p></div>
+>>>>>>> f471f2679fbe813e88564fdbed1fd91ba80af21d
+               <div class="col s4"><a href="playerProfile.html" class="btn wave-effect waves-light teal" id="showprofile">Profile</a></div>
+            </div>
+            <hr>
+            <!-- first row -->
+            <form class="col s12" id="registration-form" method="post">
+            <!-- form cointainer -->
+            <div class="form-container">
+            <div class="row"> 
+              <div class="input-field col s6">
+                <i class="material-icons prefix">account_circle</i>
+                <input id="firstName" name="firstname" type="text" class="validate">
+                <label for="firstName">Parent's First Name*</label>
+                </div>
+                <div class="input-field col m6">
+                    <i class="material-icons prefix">account_circle</i>
+                    <input id="lastName" name="lastname" type="text" class="validate">
+                    <label for="lastName">Parent's Last Name*</label>
+                </div>
+              </div>
+              <!-- second row -->
+              <div class="row">
+              <div class="input-field col s6">
+                   <i class="material-icons prefix">home</i>
+                   <input id="address" name="address" type="text" class="validate">
+                   <label for="address">Address</label>
+               </div>
+               <div class="input-field col m3">
+                   <!-- <i class="material-icons prefix">phone</i> -->
+                   <input id="city" name="city" type="text" class="validate">
+                   <label for="city"> City </label>
+               </div>
+               <div class="input-field col m3">
+                   <!-- <i class="material-icons prefix">phone</i> -->
+                   <input id="zipcode" name="zipcode" pattern="[0-9]{5}" type="text" class="validate">
+                   <label for="zipcode" data-error="Enter valid zipcode"> Zipcode </label>
+               </div>
+             </div>
+              <!-- third row -->
+             <div class="row"> 
+              <div class="input-field col s6">
+                <i class="material-icons prefix">email</i>
+                <input id="email" name="email" type="email" class="validate">
+                <label for="email" data-error="Enter valid email address">Email Address</label>
+              </div>
+              <div class="input-field col s6">
+                <i class="material-icons prefix">phone</i>
+                <input id="phoneNumber" name="phone" type="tel" pattern="[0-9]{10}" class="validate">
+                <label for="phoneNumber" data-error="Enter valid phone number"> Contact Number</label>
+              </div>
+            </div>
+               <!-- Third row -->
+             <div class="row"> 
+              <div class="input-field col s6">
+                <i class="material-icons prefix">child_care</i>
+                <input id="childFirstName" name="childfirstname" type="text" class="validate">
+                <label for="childFirstName">Child’s First Name*</label>
+                </div>
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">child_care</i>
+                    <input id="childLastName" name="childlastname" type="text" class="validate">
+                    <label for="childLastName">Child’s Last Name*</label>
+                </div>
+                
+              </div>
+              <!-- Fourth row -->
+             <div class="row"> 
+                <div class="input-field col m6">
+                    <i class="material-icons prefix">perm_contact_calendar</i>
+                    <input id="dateOfBirth" name="dob" type="text" class="datepicker">
+                    <!-- <input id="dateOfBirth" type="date" class="validate" placeholder="DOB"> -->
+                    <label for="dateOfBirth">Child : Date Of Birth </label>
+                </div>
+                <div class="input-field col m6">
+                  <i class="material-icons prefix">location_city</i>
+                 <select id="academy" name="academy">
+                    <option value="" disabled selected>Choose your option</option>
+                    <option value="Baseball">Baseball Academy</option>
+                    <option value="Hockey">Hockey Academy</option>
+                    <option value="Football">Football Academy</option>
+                    <option value="Soccer">Soccer Academy</option>
+                 </select>
+                 <label>Game Academy</label>
+               </div>
+              </div>
+              <!-- Grades=== -->
+              <div class="row"> 
+              <div class="input-field col m6">
+               <i class="material-icons prefix">school</i>
+                <select id="agegroup" class="required" name="agegroup">
+                    <option value="" disabled selected>Choose your option</option>
+                    <option value="1">Junior Group (5yrs - 10yrs)</option>
+                    <option value="2">Youth Group (11 - 16yrs)</option>
+                 </select>
+                 <label>* Age Group </label>
+              </div>
+                <!-- child jersey size -->       
+              <div class="input-field col m6">
+                <i class="material-icons prefix">directions_run</i>
+                 <select id="jerseysize">
+                    <option value="" disabled selected>Choose your option</option>
+                    <option value="4T">4T</option>
+                    <option value="5T">5T</option>
+                    <option value="Youth Small">Youth Small</option>
+                    <option value="Youth medium">Youth Medium</option>
+                    <option value="Youth Large">Youth Large</option>
+                    <option value="Youth XL">   Youth XL</option>
+                    <option value="Adult Small">Adult Small</option>
+                    <option value="Adult Medium">Adult Small</option>
+                    <option value="Adult Large">Adult Large</option>
+                </select>
+                <label>Jersey Size*</label>
+              </div>
+            </div>
+                 <!-- child Speed -->
+              <div class="row"> 
+              <div class="input-field col m6">
+              <i class="material-icons prefix">directions_run</i>
+                 <select id="childspeed">
+                    <option value="" disabled selected>Choose your option</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                 </select>
+                 <label>Rate your child's speed* (1=slow, 5=fast)</label>
+              </div>
+                  <!-- child jersey size -->
+             <div class="input-field col m6">
+               <i class="material-icons prefix">add_shopping_cart</i>
+                 <select id="jerseyname">
+                    <option value="" disabled selected>Choose your option</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+                <label>Would you like your child's LAST NAME added to your child's jersey ($13.50)?*</label>
+               </div><br>
+            </div>
+          <!-- Switch for mobile notification-->
+              <div class="switch">
+                <label>
+                 Do you want game notification on your Mobile? OFF
+                  <input type="checkbox" id="textnotify">
+                  <span class="lever"></span>
+                  On
+                </label>
+              </div><br>
+              <!-- Switch for email  -->
+              <div class="switch">
+                <label>
+                  Do you want game notification on your Email ID? OFF
+                  <input type="checkbox" id="emailnotify">
+                  <span class="lever"></span>
+                  On
+                </label>
+              </div><br><br>
+            <center>
+                <button class="btn waves-effect waves-light teal" id="register">REGISTER</button>
+            <br><br>
+           </center>
+        </form>
+      </div>
+      <div class="col s12 text-center"><p id="message_window"></p></div>
+     </div>
+    </div>
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+          <div class="modal-body">
+            <p>Some text in the modal.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+      </div>
+      
+    </div>
+  </div>
+    <script type="text/javascript">
+        // for date 
+        $('select').material_select();  
+        $('.datepicker').pickadate({
+    selectMonths: true, // Creates a dropdown to control month
+    selectYears: 15, // Creates a dropdown of 15 years to control year,
+    today: 'Today',
+    clear: 'Clear',
+    close: 'Ok',
+    closeOnSelect: false // Close upon selecting a date,
+  });
+    </script>
+    <script src="assets/js/registration.js"></script>
+</body>
+</html>

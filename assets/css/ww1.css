@@ -1,0 +1,72 @@
+
+  .navbar {
+      margin-bottom: 0;
+      background-color: #7d716d;
+      z-index: 9999;
+      border: 0;
+      font-size: 12px !important;
+      line-height: 1.42857143 !important;
+      letter-spacing: 4px;
+      border-radius: 0;
+      font-family: Montserrat, sans-serif;
+  }
+  .navbar li a, .navbar .navbar-brand {
+      color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+      color: #7d716d !important;
+      background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+      color: #fff !important;
+   }
+   .jumbotron {
+    background-color: #69818a;
+    color: black;
+    padding: 100px 25px;
+    background-image: url("https://fm.cnbc.com/applications/cnbc.com/resources/img/editorial/2014/07/24/101864398-youth-soccer.1910x1000.jpg");
+    background-size: cover;
+    margin-top: 3em;
+    padding-top: 10em;
+    padding-bottom: 25em;
+}
+.one{
+  background-color: red;
+}
+
+  
+
+}
+.thumbnail {
+      display: block;
+    max-width: 100%;
+    height: auto;
+}
+footer{
+  color: white;
+}
+footer a{
+  color: #bfffff;
+}
+footer a:hover{
+  color: white;
+}
+
+.footer-bottom{
+  background: #3d6277;
+  padding: 2em;
+}
+.footer-top{
+  background: #2d4958;  
+}
+.footer-middle{
+   background: #3d6277;
+  padding-top: 2em;
+  }
+.button {
+  text-align: center;
+}
+.intro {
+  text-align: center;
+}

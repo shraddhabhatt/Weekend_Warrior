@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+
+<channel>
+  <title>upcoming Events </title>
+  <link>https://rupali8086.github.io/GameWorrior/index.html</link>
+  <description>upcoming Events near you </description>
+  <item>
+    <title>Events</title>
+    <link>https://rupali8086.github.io/GameWorrior/rss.xml</link>
+    <description>New events on WW</description>
+  </item>
+ </channel>
+</rss>

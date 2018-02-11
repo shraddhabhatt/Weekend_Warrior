@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HOME</title>
+	<!-- fevicon -->
+    <link rel="icon" href="assets/image/favicon.ico" type="image/ico" sizes="16x16">
+	<!-- firebase -->
+    <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+	<!-- jq -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+	<!-- jq -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.14.0/jquery.validate.min.js"></script>
+	<!-- bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous"> 
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+	<!-- Compiled and minified CSS -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+
+    <!-- =======================STYLE SET ==================================================================== -->
+    <style type="text/css">
+    	.nav-wrapper {background-color:black; padding: 30px;height: padding-top:30px;padding-bottom: 100px;padding-right: 15px;  }
+    	.page-footer {background-color:black;}
+    	marquee{color: white;}
+    	#optionBody{ height: 90%; }
+    	nav ul a { font-size: 18px; }
+    	nav ul a:hover {text-decoration: none; font-size:30px;color:yellow; }
+    	#optionsForYou {
+		    width: 190px;
+		    height: 200px;
+		    margin-top: 20%;
+		    margin-left: 110px;
+		    cursor: pointer;
+		    -webkit-animation: mymove 3s infinite; /* Chrome, Safari, Opera */
+		    animation: mymove 3s infinite;
+
+		}
+		#optionsForYou:hover{animation: none;}
+		/* Chrome, Safari, Opera */
+		@-webkit-keyframes mymove {
+		    100% {-webkit-transform: rotate(360deg);}
+		}
+
+		/* Standard syntax */
+		@keyframes mymove {
+		    100% {transform: rotate(360deg);}
+		}
+	</style>
+	<!-- ================================================END style tag============================================ -->
+</head>
+<!--HEAD end & start body tag  -->
+<body style="background-image: url(assets/image/grass.jpg)">
+			
+	<!-- NAVBAR -->
+			  <nav>
+			    <div class="nav-wrapper">
+			      <!-- <a href="#" class="brand-logo">gameWorriors</a> -->
+			      <a href="options.html"><img src="assets/image/logo1.png" alt="logo" width="300px" height="80px"></a>
+			      <ul id="nav-mobile" class="right hide-on-med-and-down">
+			        <li><a id="sideOption" href="options.html">ABOUT</a></li>
+			        <li><a id="sideOption" href="wwsoccer.html">SOCCER</a></li>
+			        <li><a id="sideOption" href="wwfootball.html">FOOTBALL</a></li>
+			        <li><a id="sideOption" href="wwhockey.html">HOCKEY</a></li>
+			        <li><a id="sideOption" href="wwbaseball.html">BASEBALL</a></li>
+			        <li><a id="sideOption" href="playerProfile.html">PROFILE</a></li>
+
+			      </ul>
+			    </div>
+			  </nav> 
+	<!-- END NAVBAR -->
+	<!-- SELECT YOUR OPTION -->
+		<div id="optionBody">
+		<div class="allOptionImage ">
+			
+			<a id="sideOption" href="wwsoccer.html"><img id="optionsForYou" src="assets/image/soccer.png" alt="soccer"></a>
+			<a id="sideOption" href="wwhockey.html"><img id="optionsForYou" src="assets/image/hocky.png" alt="hockey"></a>
+			<a id="sideOption" href="wwfootball.html"><img id="optionsForYou" src="assets/image/football.png" alt="football"></a>
+			<a id="sideOption" href="wwbaseball.html"><img id="optionsForYou" src="assets/image/Basketball.png" alt="Basketball" width="200px" height="60px"></a>
+		</div>
+		<br><br>
+		<div><marquee>Click on Your Game </marquee></div>
+	</div>
+	<!-- END SELECTION -->
+
+	<!-- FOOTER -->
+		 <footer class="page-footer">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <a class="grey-text text-lighten-3" href="index.html">www.gameWARRIORS.com</a>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                
+                <a href="options.html"><img src="assets/image/logo1.png" alt="logo" width="300px" height="80px"></a>
+                <ul>
+                    <li><a class="grey-text text-lighten-3" href="options.html">HOME</a></li>
+                    <li><a  class="grey-text text-lighten-3" href="wwsoccer.html">SOCCER</a></li>
+			        <li><a class="grey-text text-lighten-3" href="wwfootball.html">FOOTBALL</a></li>
+			        <li><a class="grey-text text-lighten-3"  href="wwhockey.html">HOCKEY</a></li>
+			        <li><a class="grey-text text-lighten-3" href="wwbaseball.html">BASEBALL</a></li>
+			        <li><a class="grey-text text-lighten-3" href="playerProfile.html">PROFILE </a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2018 gameWARRIORS
+            </div>
+          </div>
+        </footer>
+    <!--END FOOTER  -->
+<!-- script================================================================================ -->
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+   crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+	$( document ).ready(function(){
+		$(".button-collapse").sideNav();
+	});
+</script>
+<!-- END script================================================================================ -->
+</body>
+</html>

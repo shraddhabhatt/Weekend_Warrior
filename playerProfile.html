@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Player's Profile</title>
+
+    <link rel="icon" href="assets/image/favicon.ico" type="image/ico" sizes="16x16">
+
+    <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.14.0/jquery.validate.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous"> 
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- <link rel="stylesheet" type="text/css" href="assets/css/reset.css"> -->
+    <link rel="stylesheet" type="text/css" href="assets/css/ww3.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+
+   
+      <!-- <script>
+          window.onload = function () {
+
+          var options = {
+            exportEnabled: true,
+            animationEnabled: true,
+            title: {
+              text: "Players progress Chart"
+            },
+            data: [
+            {
+              type: "splineArea",
+              dataPoints: [
+                { y: 10 },
+                { y: 6 },
+                { y: 14 },
+                { y: 12 },
+                { y: 19 },
+                { y: 14 },
+                { y: 26 },
+                { y: 10 },
+                { y: 22 }
+              ]
+            }
+            ]
+          };
+          $("#chartContainer").CanvasJSChart(options);
+
+          }
+    </script> -->
+</head>
+<body >
+      
+   <!-- Navbar -->
+    <nav class="navbar sticky-top navbar-dark bg-dark">
+      <a class="navbar-brand" href="wwoption.html">Home</a>
+       
+      <a class="navbar-brand" href="#WW">Weekend Warrior Profile </a>
+          <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Sports
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="ww3.html">Soccer</a>
+        <a class="dropdown-item" href="wwhockey.html">Hockey</a>
+        <a class="dropdown-item" href="wwbaseball.html">Baseball</a>
+        <a class="dropdown-item" href="wwfootball.html">Football</a>
+        <a class="dropdown-item" href="event.html">Events</a>
+        <a class="dropdown-item" href="playerProfile.html">Profile</a>
+        </div>
+      </div>
+        <br>
+    </nav>
+    <!-- jumbotron -->
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4">Weekend Warrior Profile</h1>
+        <p class="lead">Hello , This page is to see your activities including upcoming events.This information is provided to assist you and your child to have  successful year!</p>
+        <!-- rss feed -->
+       <a href="rss.xml"><img src="assets/image/rss.png" width="50px" height="auto"></a>
+      </div>
+    </div>
+  
+    <div>
+ 
+      
+
+<!--======================================== 1. upcoming events=========================================  -->
+ <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+
+    <div class="row">
+      <div class="col-lg-12">
+        <!-- Info -->
+          <div class="panel panel-primary info">
+            <table class="table table-hover" id="gameTable">
+            <thead>
+              <!-- <table border="1|0"> -->
+              <tr>
+                <th>Upcoming Events</th>
+                <th>Location</th>
+                <th>Date</th>
+                <th>Time</th>                           
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <a href="event.html" class="btn">Event with a massive discount</a>
+    <br><hr>
+  </div>
+</div>
+</div>
+<!-- end upcoming event -->
+<!--================================================================================  -->
+<!-- chart  -->
+<!-- <div id="chartContainer" style="height: 300px; width: 80%; margin-left: 150px; margin-top: 100px;"></div> -->
+<!-- =====================================================================================  -->
+<!-- Instructions  -->
+<div class="jumbotron jumbotron-fluid">
+      <div class="container">
+       <center><h1>Team Guidelines</h1><br></center><hr>
+          <ul id="list">
+             <li>Be at practice on time</li><br>
+             <li>Players will call head coach if they can’t make practice</li><br>
+             <li>Show respect to teammates, coaches and parents!</li><br>
+             <li>No talking when a coach is talking</li><br>
+             <li>Parents let the coaches do the coaching, please respect team rules!</li><br>
+             <li>Everyone plays (coaches will work together to make sure all players have playing time)</li><br>
+             <li>A Team players are encouraged to stay for B Team games</li><br>
+             <li>We will practice in the rain (cancel only for thunder and lightning)</li><br>
+             <li>Players need to stay hydrated during the day before practice </li> <br><br><br>
+          </ul>
+        </div>
+       <hr>
+       <div class="card-panel">
+         <table id="nextgame">
+            <thead>
+              <tr style="color: blue;">
+                  <th>Next Game on </th>
+                  <th>Location</th>
+                  <th>Time</th>
+              </tr>
+            </thead>
+
+            <tbody style="color: blue;">
+              
+            </tbody>
+          </table>
+    </div>
+  </div>
+</div>
+<!-- END  Instructions ===================================================================-->
+
+<!-- =====================================================================================  -->
+<!-- FOOTER -->
+    <footer class="mainfooter" role="contentinfo">
+      <div class="footer-top p-y-2">
+        <div class="container-fluid">
+          <div class="row">
+            
+            <div class="col-md-12">
+              <div class="footer-title text-xs-center">
+              <h4 class="p-b-1">Contact Us</h4>
+            </div>
+
+        </div>
+      </div>
+      <div class="footer-middle">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 col-sm-6">
+            <!--Column1-->
+            <div class="footer-pad">
+              <h4>Address</h4>
+              <address>
+          <ul class="list-unstyled">
+            <li>
+              212  Street<br>
+              Portsmouth, New hampshire, 01832
+              </li>
+              <li>
+                Phone: 0
+              </li>
+            </ul>
+          </address>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+           <!--Column1-->
+        <div class="footer-pad">
+          <h4>Sports</h4>
+          <ul class="list-unstyled">
+            <li><a href="event.html">Events Near You</a></li>
+            <li><a href="ww3.html">Soccer</a></li>
+            <li><a href="wwhockey.html">Hockey</a></li>
+            <li><a href="wwbaseball.html">Baseball</a></li>
+            <li><a href="wwfootball.html">Football</a></li>
+            
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <!--Column1-->
+        <div class="footer-pad">
+         <h4>Developers</h4>
+            <ul class="list-unstyled">
+              <li><a href="#">Rupali Meshram</a></li>
+              <li><a href="#">Don Barbarits</a></li>
+              <li><a href="#">Shradhha Bhatt</a></li>
+              <li><a href="#">Alex Jimenez</a></li>
+          </ul>
+        </div>
+      </div>
+          <div class="col-md-3 col-sm-6">
+            <!--Column1-->
+            <div class="footer-pad">
+              <h4>Popular Departments</h4>
+              <ul class="list-unstyled">
+                <li><a href="#">Parks and Recreation</a></li>
+                <li><a href="#">Public Works</a></li>
+                <li><a href="#">Police Department</a></li>
+                <li><a href="#">Fire</a></li>
+                <li><a href="#">Mayor and City Council</a></li>
+                <li>
+                  <a href="#"></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12">
+              <!--Footer Bottom-->
+              <p class="text-xs-center">&copy; Copyright 2018 - Weekend Warrior.  All rights reserved.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
+ <script src="assets/js/profile.js"></script>
+</body>
+</html>
